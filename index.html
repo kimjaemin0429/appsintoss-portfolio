@@ -202,24 +202,6 @@
             overflow: visible;
         }
 
-        .app-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: 20px 20px 0 0;
-            pointer-events: none;
-        }
-
-        .app-card:hover::before {
-            opacity: 1;
-        }
-
         .app-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
@@ -306,6 +288,13 @@
             letter-spacing: 0.6px;
             box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
             z-index: 10;
+        }
+
+        .badge.recommend {
+            left: -10px;
+            right: auto;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
         }
 
         .badge.coming {
@@ -577,7 +566,7 @@
                     </div>
                     <div class="app-content">
                         <div class="app-name">소득 기준액 계산기</div>
-                        <div class="app-desc">하위/중위 구분을 위한 소득 기준액 계산</div>
+                        <div class="app-desc">하위? 중위? 생활지원금·복지 신청 전 자격 확인</div>
                         <a href="https://minion.toss.im/PVBL20Sm" target="_blank" class="app-button">열기</a>
                     </div>
                 </div>
@@ -603,7 +592,7 @@
                     </div>
                     <div class="app-content">
                         <div class="app-name">퇴사: 지금어때?</div>
-                        <div class="app-desc">퇴사 해도 될지 한눈에 확인</div>
+                        <div class="app-desc">퇴직금, 실업급여 한눈에 확인</div>
                         <a href="https://minion.toss.im/DB7XiPjf" target="_blank" class="app-button">열기</a>
                     </div>
                 </div>
@@ -616,7 +605,7 @@
                     </div>
                     <div class="app-content">
                         <div class="app-name">하이어렌즈</div>
-                        <div class="app-desc">이 공고에 지원해도 될지 한눈에 확인</div>
+                        <div class="app-desc">이 공고에 지원하는게 좋을지 한눈에 확인</div>
                         <a href="https://minion.toss.im/RWXHEEWk" target="_blank" class="app-button">열기</a>
                     </div>
                 </div>
@@ -630,12 +619,13 @@
                 <!-- App 5 -->
                 <div class="app-card coming-soon">
                     <div class="app-icon-container">
+                        <span class="badge recommend">강추</span>
                         <span class="badge coming">심사중</span>
                         <img src="https://static.toss.im/appsintoss/30821/a771645b-20ec-4fe2-aa46-c5c7918d12ea.png" alt="머니카운트">
                     </div>
                     <div class="app-content">
                         <div class="app-name">머니카운트</div>
-                        <div class="app-desc">실시간 월급 수령액 카운터</div>
+                        <div class="app-desc">1초에 얼마벌지? 실시간 월급 수령액 카운터</div>
                         <button class="app-button" disabled>출시예정</button>
                     </div>
                 </div>
@@ -648,7 +638,7 @@
                     </div>
                     <div class="app-content">
                         <div class="app-name">세탁금지구역</div>
-                        <div class="app-desc">세탁 기호 번역 & 가이드</div>
+                        <div class="app-desc">세탁 기호 의미 번역 & 가이드</div>
                         <button class="app-button" disabled>출시예정</button>
                     </div>
                 </div>
@@ -657,7 +647,7 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>📱 앱인토스에서 제공하고는 미니앱 포트폴리오</p>
+            <p>📱 앱인토스에서 제공하는 미니앱 포트폴리오</p>
             <p style="margin-top: 8px; font-size: 11px; color: var(--text-secondary);">Made by 대디랩스 · 2026</p>
         </div>
     </div>
