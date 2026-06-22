@@ -632,11 +632,23 @@
             </div>
         </div>
 
-        <!-- Footer -->
+<!-- Footer -->
         <div class="footer">
-            <p>📱 앱인토스에서 제공하는 나의 미니앱 포트폴리오</p>
+            <p>📱 앱인토스에서 제공하는 미니앱 포트폴리오</p>
             <p style="margin-top: 8px; font-size: 11px; color: var(--text-secondary);">Made by 대디랩스 · 2026</p>
+            <p id="visitor-count" style="margin-top: 12px; font-size: 10px; color: var(--text-secondary); opacity: 0.6;">
+                👀 Today: - visits
+            </p>
         </div>
     </div>
+
+    <script>
+        fetch('/api/counter')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = `👀 Today: ${data.count} visits`;
+            })
+            .catch(err => console.log('Counter error:', err));
+    </script>
 </body>
 </html>
